@@ -1,0 +1,12 @@
+# Example 1
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mypod2
+spec:
+  containers:
+  - image: centos
+    name: mypod2
+    stdin: true
+    tty: true
+   

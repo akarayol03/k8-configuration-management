@@ -1,0 +1,19 @@
+apiVersion: extensions/v1beta1
+kind: ReplicaSet
+metadata:
+  name: myapache2-rs
+spec:
+  replicas: 3
+  imagePullSecrets:
+    name: mydockerhubsecret
+  selector:
+    matchLabels:
+      labels:
+        app: myapache2-rs-pod
+  template:
+    metadata:
+      labels:
+              :specs:          
+        app: myapache2-rs-pod
+      - image: gcr.io/kuar-demo/kuard-amd64:1
+        name: kuard
