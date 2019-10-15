@@ -6,3 +6,5 @@ spec:
   containers:
   - image: ubuntu
     name: ubuntu
+    stdin: true
+    tty: true
