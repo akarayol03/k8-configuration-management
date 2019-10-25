@@ -1,0 +1,19 @@
+# Example 16 Request, Limit
+apiVersion: v1
+king: Pod
+metadata:
+  labels:
+    app: myappv2-req-limit
+  name: myappv2-pod
+spec:
+  containers:
+  - image: gcr.io/kuar-demo/kuard-amd64:1
+    name: kuard
+    ressources:
+      request:
+        cpu: "500m"
+        memory: "128Mi"
+    ports:
+    - containerPort: 8080
+      name: http
+      protocol: TCP
